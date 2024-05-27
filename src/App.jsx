@@ -1,6 +1,6 @@
 // src/App.jsx
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import GamePage from './pages/GamePage';
+import Game from './pages/Game';
 import Index from './pages/Index';
 import Login from './pages/Login';
 import Map from './pages/Map';
@@ -18,7 +18,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/game" element={<GamePage />} />
+          <Route path="/game" element={<Game />} />
           <Route path="/login" element={<Login />} />
           <Route path="/map" element={<Map />} />
           <Route path="/profil" element={<Profil />} />
