@@ -1,15 +1,15 @@
 // src/App.jsx
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import GamePage from "./pages/GamePage";
-import Index from "./pages/Index";
-import Login from "./pages/Login";
-import Map from "./pages/Map";
-import Profil from "./pages/Profil";
-import Register from "./pages/Register";
-import ShopPage from "./pages/ShopPage";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import NotFound from "./components/NotFound";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import GamePage from './pages/GamePage';
+import Index from './pages/Index';
+import Login from './pages/Login';
+import Map from './pages/Map';
+import Profil from './pages/Profil';
+import Register from './pages/Register';
+import ShopPage from './pages/ShopPage';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -17,16 +17,16 @@ function App() {
       Hello motherfucking World!
       <Header />
       <Router>
-        <Switch>
-          <Route exact path="/" component={Index} />
-          <Route path="/game" component={GamePage} />
-          <Route path="/login" component={Login} />
-          <Route path="/map" component={Map} />
-          <Route path="/profil" component={Profil} />
-          <Route path="/register" component={Register} />
-          <Route path="/shop" component={ShopPage} />
-          <Route component={NotFound} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/game" element={<GamePage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/map" element={<Map />} />
+          <Route path="/profil" element={<Profil />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="*" element={<NotFound />} /> {/* This will catch any undefined routes */}
+        </Routes>
       </Router>
       <Footer />
     </>
