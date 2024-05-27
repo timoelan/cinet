@@ -1,4 +1,6 @@
 function Button() {
-  return <>Button</>
+  return (
+    <button className="button">Register</button>
+  )
 }
 export default Button;
