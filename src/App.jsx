@@ -14,7 +14,6 @@ import NotFound from './components/NotFound';
 function App() {
   return (
     <>
-      Hello motherfucking World!
       <Header />
       <Router>
         <Routes>
