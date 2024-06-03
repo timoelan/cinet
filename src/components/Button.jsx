@@ -1,6 +1,6 @@
 function Button() {
   return (
-    <button className="button">Register</button>
+    <button className="button">ACCOUNT ERSTELLEN</button>
   )
 }
 export default Button;
