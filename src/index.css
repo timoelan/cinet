@@ -70,7 +70,6 @@ h1 {
 /* Register Site */
 
 .register-container{
-  margin-left: 50%;
   width: 100vh;
   border: 2px solid black;
   justify-content: center;
