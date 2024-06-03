@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -70,6 +70,7 @@ h1 {
 /* Register Site */
 
 .register-container{
+  margin-left: 50%;
   width: 100vh;
   border: 2px solid black;
   justify-content: center;
@@ -78,11 +79,8 @@ h1 {
 
 .register-container input{
   height: 30px;
-  width: 300px;
+  width: 80%;
   border-color: #020202;
-}
-
-.register-conatiner p{
-  color: #020202;
-  margin-bottom: -10px;
+  border: 2px solid;
+  font-size: 20px;
 }

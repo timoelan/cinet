@@ -32,7 +32,6 @@ function App() {
 
   return (
     <>
-      Hello motherfucking World!
       <Header />
       <div className="main">
         <Router>

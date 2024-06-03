@@ -7,16 +7,16 @@ function Register(){
     <div className='register-container'>
       <h1>Account erstellen</h1>
       <div className="rout-to-login">
-        <h3>Hast du schon einen Account? <br/> <a href='/login'>Hier anmelden</a></h3> 
+        <h4 className='link-to-login'>Hast du schon einen Account? <br/> <a href='/login'>Hier anmelden</a></h4> 
       </div>
-      <p>Username</p>
-      <Input></Input>
+      <h3>Username</h3>
+      <Input placeholder='Username'></Input>
       <br />
-      <p>Email</p>
-      <Input></Input>
+      <h3>Email</h3>
+      <Input placeholder='Email'></Input>
       <br />
-      <p>Password</p>
-      <Input type='password'></Input>
+      <h3>Password</h3>
+      <Input type='password' placeholder='Password'></Input>
       <br />
       <br />
       <Button></Button>
