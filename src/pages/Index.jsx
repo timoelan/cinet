@@ -1,4 +1,8 @@
+import Card from "../components/Card";
 function Index() {
-  return <>Index</>;
+  return (  <>
+<Card> </Card>
+</>
+)
 }
 export default Index;

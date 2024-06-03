@@ -7,8 +7,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import Game from "./pages/Game";
-import Index from "./pages/Index";
 import Login from "./pages/Login";
+import Index from "./pages/Index";
 import Map from "./pages/Map";
 import Profil from "./pages/Profil";
 import Register from "./pages/Register";
@@ -36,7 +36,7 @@ function App() {
       <div className="main">
         <Router>
           <Routes>
-            <Route path="/" element={<ProtectedRoute element={Index} />} />
+            <Route path="/index" element={<ProtectedRoute element={Index} />} />
             <Route path="/game" element={<ProtectedRoute element={Game} />} />
             <Route path="/map" element={<ProtectedRoute element={Map} />} />
             <Route

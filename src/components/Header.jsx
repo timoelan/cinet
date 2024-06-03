@@ -3,7 +3,7 @@ function Header() {
   <>
   <nav className="navbar bg-body-tertiary fixed-top">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Offcanvas navbar</a>
+    <a className="navbar-brand col-11" href="#">Offcanvas navbar</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
