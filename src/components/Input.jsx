@@ -1,11 +1,13 @@
 // eslint-disable-next-line react/prop-types
-const Input = ({ type = "text", value, onChange, ...props }) => {
+const Input = ({ type = 'text', name, placeholder, value, onChange, className }) => {
   return (
     <input
+      className={className}
       type={type}
+      name={name}
+      placeholder={placeholder}
       value={value}
-      onChange={(e) => onChange(e.target.value)}
-      {...props}
+      onChange={onChange}
     />
   );
 };

@@ -1,5 +1,3 @@
-// src/App.jsx
-import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -16,47 +14,71 @@ import ShopPage from "./pages/ShopPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
+import { useState } from "react";
 
 function App() {
+  const [user, setUser] = useState({
+    username: "",
+    email: "",
+    password: "",
+    birthdate: "",
+  });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
   // eslint-disable-next-line react/prop-types
-  const ProtectedRoute = ({ element: Component }) => {
-    return isLoggedIn ? <Component /> : <Navigate to="/login" />;
+  const ProtectedRoute = ({ element }) => {
+    return isLoggedIn ? element : <Navigate to="/login" />;
   };
-
   // eslint-disable-next-line react/prop-types
-  const PublicRoute = ({ element: Component }) => {
-    return !isLoggedIn ? <Component /> : <Navigate to="/" />;
+  const PublicRoute = ({ element }) => {
+    return !isLoggedIn ? element : <Navigate to="/" />;
   };
 
   return (
     <>
-      <Header />
-      <div className="main">
+      {isLoggedIn && <Header />}
+      <div className="logo-container w-100 justify-content-center d-flex mt-5">
+        <img src="/public/assets/icons/logo.png" width="150"></img>
+      </div>
+      <div className="main-wrapper d-flex justify-content-center flex-column w-75 w-lg-50 mx-auto">
         <Router>
           <Routes>
-            <Route path="/" element={<ProtectedRoute element={Index} />} />
-            <Route path="/game" element={<ProtectedRoute element={Game} />} />
-            <Route path="/map" element={<ProtectedRoute element={Map} />} />
+            <Route path="/" element={<ProtectedRoute element={<Index />} />} />
+            <Route
+              path="/game"
+              element={<ProtectedRoute element={<Game />} />}
+            />
+            <Route path="/map" element={<ProtectedRoute element={<Map />} />} />
             <Route
               path="/profil"
-              element={<ProtectedRoute element={Profil} />}
+              element={<ProtectedRoute element={<Profil />} />}
             />
             <Route
               path="/shop"
-              element={<ProtectedRoute element={ShopPage} />}
+              element={<ProtectedRoute element={<ShopPage />} />}
             />
-            <Route path="/login" element={<PublicRoute element={Login} />} />
+            <Route
+              path="/login"
+              element={
+                <PublicRoute
+                  element={<Login user={user} setIsLoggedIn={setIsLoggedIn} />}
+                />
+              }
+            />
             <Route
               path="/register"
-              element={<PublicRoute element={Register} />}
+              element={
+                <PublicRoute
+                  element={
+                    <Register setUser={setUser} setIsLoggedIn={setIsLoggedIn} />
+                  }
+                />
+              }
             />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
       </div>
-      <Footer />
+      {isLoggedIn && <Footer />}
     </>
   );
 }
