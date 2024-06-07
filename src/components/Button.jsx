@@ -1,6 +1,12 @@
-function Button() {
+// Button.js
+import React from 'react';
+
+function Button({ children, className, onClick }) {
   return (
-    <button className="button">ACCOUNT ERSTELLEN</button>
-  )
+    <button className={`button ${className}`} onClick={onClick}>
+      {children}
+    </button>
+  );
 }
+
 export default Button;

@@ -1,28 +1,40 @@
+// Game.js
 import React from 'react';
 import Card from '../components/Card';
 
 function Game() {
+  const handleButtonClick = () => {
+    alert('Spiel gestartet!');
+  };
+
   return (
-    <div className="container">
-      <div className="row">
+    <div className="container mt-4">
+      <div className="row justify-content-center">
         <div className="col-md-4">
           <Card
-            text="Some quick example text to build on the card title and make up the bulk of the card's content."
-            src="src\assets\icons\tempelrun.webp"
+            title="Cinema Run"
+            src="public\assets\icons\tempellrun.png"
+            alt="First Card Image"
+            description="This is the description for Game 1."
+            onButtonClick={handleButtonClick}
           />
         </div>
         <div className="col-md-4">
           <Card
-            src="https://via.placeholder.com/150/0000FF/808080"
+            title="Flappy Cinema"
+            src="public\assets\icons\flappybird.png"
             alt="Second Card Image"
-            text="Another quick example text for the second card."
+            description="This is the description for Game 2."
+            onButtonClick={handleButtonClick}
           />
         </div>
         <div className="col-md-4">
           <Card
-            src="https://via.placeholder.com/150/FF0000/FFFFFF"
+            title="Cinema Surfer"
+            src="public\assets\icons\subwaysurfer.png"
             alt="Third Card Image"
-            text="Some more example text for the third card."
+            description="This is the description for Game 3."
+            onButtonClick={handleButtonClick}
           />
         </div>
       </div>
