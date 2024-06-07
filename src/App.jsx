@@ -36,16 +36,16 @@ function App() {
       <div className="main">
         <Router>
           <Routes>
-            <Route path="/index" element={<ProtectedRoute element={Index} />} />
-            <Route path="/game" element={<ProtectedRoute element={Game} />} />
-            <Route path="/map" element={<ProtectedRoute element={Map} />} />
+            <Route path="/index" element={<PublicRoute element={Index} />} />
+            <Route path="/game" element={<PublicRoute element={Game} />} />
+            <Route path="/map" element={<PublicRoute element={Map} />} />
             <Route
               path="/profil"
-              element={<ProtectedRoute element={Profil} />}
+              element={<PublicRoute element={Profil} />}
             />
             <Route
               path="/shop"
-              element={<ProtectedRoute element={ShopPage} />}
+              element={<PublicRoute element={ShopPage} />}
             />
             <Route path="/login" element={<PublicRoute element={Login} />} />
             <Route
